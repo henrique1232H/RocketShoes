@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --button: #FF0000;
+    --main-background:  #C4C4C4;
+    --background: #E5E5E5;
+    --text: #000;
+    --footer: #000;
+    --text-description: #9C9696;
+    --padding: 1rem 3rem;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.menu {
+    padding: 1rem 3rem;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.menu ul li {
+    list-style: none;
+}
+
+.menu a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.menu input {
+    border: none;
+    height: 2.5rem;
+    width: 15rem;
+    background-image: url("../img/icon-search.svg");
+    background-position: 0.8rem 0.7rem;
+    background-size: 1.6rem;
+    background-repeat: no-repeat;
+    padding-left: 3rem;
+}
+
+
+.menu img {
+    height: 2.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    grid-template-areas: 
+    'menu menu'
+    'teste tenis'
+    'footer footer';
+}
+
+.grid aside {
+    grid-area: menu;
+    position: absolute;
+    width: 100%;
+}
+
+.grid .teste {
+    background: var(--background);
+    grid-area: teste;
+    display: flex;
+    padding: 10rem 6rem;
+}
+
+.text h1 {
+    text-transform: capitalize;
+    font-size: 6.2rem;
+}
+
+.text p {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: var(--text-description);
+}
+
+.teste .text {
+    height: 80vh;
+}
+
+.text h3 {
+    font-weight: 700;
+    font-size: 3rem;
+    margin: 3rem 0 2rem 0;
+}
+
+.text button {
+    border: none;
+    background: var(--button);
+    color: var(--background);
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 50%;
+    height: 6rem;
+    cursor: pointer;
+}
+
+.grid .tenis {
+    background: var(--main-background);
+    grid-area: tenis;
+}
+
+.tenis .photo-tenis {
+    margin: 10rem 10rem 0rem 10rem;
+    height: 500px;
+    width: 597px;
+    background-image: url('../img/tenis-1-ampliado.png');
+    transition: 0.2s all ease-in-out;
+}
+
+.photo-tenis:hover {
+    transform: translate(3px, 10px);
+}
+
+.photo-grid {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.photo-grid div {
+    width: 260.51px;
+    height: 182.8px;
+    transition: 0.2s all ease-in-out;
+}
+
+.photo-grid div:hover {
+    border-bottom: 0.5rem solid var(--button);
+}
+
+.photo-grid div:nth-child(1) {
+    background-image: url('../img/tenis-1-galeria.png');
+}
+
+.photo-grid div:nth-child(2) {
+    background-image: url('../img/tenis-2-galeria.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.photo-grid div:nth-child(3) {
+    background-image: url('../img/tenis-3-galeria.png');
+}
+
+.grid .footer {
+    grid-area: footer;
+    display: flex;
+    width: 100%;
+} 
+
+
+.footer-text {
+    height: 16.6em;
+    width: 70rem;
+    padding: 0 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-text a {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.footer-right {
+    background: var(--footer);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 16.6rem;
+    width: 50rem;
+}
+
+.footer-right a {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--background);
+}
+
+.footer-right img {
+    margin-left: 1rem;
+}
